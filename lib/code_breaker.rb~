@@ -1,0 +1,6 @@
+require "code_breaker/version"
+require "code_breaker/game"
+
+module CodeBreaker
+  # Your code goes here...
+end
