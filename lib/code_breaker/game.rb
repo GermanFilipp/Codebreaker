@@ -18,18 +18,27 @@ module CodeBreaker
     end
 
     def check_number input_number
-      @move -= 1
-      result = ""
+      @move             -= 1
+      result             = String.new
+      code_without_eql   = String.new
+      input_without_eql  = String.new
+
       return "something wrong with your number" if input_number.size != 4
       return "fail number" unless input_number.match(/^[1-6]{1,4}/)
 
       for i in 0...4
-        if input_number[i].eql? @secret_code[i]
-          result<<"+"
-        elsif @secret_code.include? input_number[i]
-          result<<"-"
+        if input_number[i] == @secret_code[i]
+          result << "+"
+        else
+        code_without_eql << @secret_code[i]
+        input_without_eql << input_number[i]
         end
       end
+
+      input_without_eql.each_char do |arg|
+        result << "-" if code_without_eql.include? arg
+      end
+
       result
     end
 
