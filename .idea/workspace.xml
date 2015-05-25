@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0df8beb-8110-45f3-8b82-4cc4e38ef7cb" name="Default" comment="re-make logic of &quot;check_number&quot; methods">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/code_breaker/gamer_spec.rb" afterPath="$PROJECT_DIR$/spec/code_breaker/gamer_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/users_data.yaml" afterPath="$PROJECT_DIR$/lib/users_data.yaml" />
+    <list default="true" id="f0df8beb-8110-45f3-8b82-4cc4e38ef7cb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="code_breaker.iws" />
@@ -38,8 +36,8 @@
       <file leaf-file-name="game.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/code_breaker/game.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39180538" vertical-offset="162" max-vertical-offset="1062">
-              <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.5300896" vertical-offset="162" max-vertical-offset="1062">
+              <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -485,7 +483,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432542901051</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="re-make logic of &quot;check_number&quot; methods">
+      <created>1432542916913</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1432542916913</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -551,9 +555,9 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="re-make logic of &quot;check_number&quot; methods" />
     <MESSAGE value="abcd" />
-    <option name="LAST_COMMIT_MESSAGE" value="abcd" />
+    <MESSAGE value="re-make logic of &quot;check_number&quot; methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="re-make logic of &quot;check_number&quot; methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -955,8 +959,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/code_breaker/game.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39180538" vertical-offset="162" max-vertical-offset="1062">
-          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.5300896" vertical-offset="162" max-vertical-offset="1062">
+          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
           <folding />
         </state>
       </provider>
