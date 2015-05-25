@@ -2,7 +2,7 @@ require 'yaml'
 
 module CodeBreaker
   class Gamer
-    @@file = "users_data.yaml"
+    FILE = "users_data.yaml"
     attr_accessor :gamers
 
     def initialize
@@ -20,17 +20,18 @@ module CodeBreaker
     end
 
     def save_data
-        File.open(@@file, "w" ) do |f|
+      return "file not found" unless File.exist? FILE
+        File.open(FILE, "w" ) do |f|
         f.write(YAML::dump(@gamers))
         f.close
       end
     end
 
     def load_data
-      a = Dir.entries"/home/german/code_breaker/"
-      return "file not found" unless a.include? @@file
 
-      data    = File.read(@@file)
+      return "file not found" unless File.exist? SCORE_INFO
+
+      data    = File.read(FILE)
       new_obj = YAML::load(data)
      unless new_obj.nil?
       new_obj.each do |f|
