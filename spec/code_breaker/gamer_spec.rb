@@ -28,14 +28,15 @@ module CodeBreaker
       end
     end
     context "#load_data" do
-
        it "not raise exception" do
-         expect {subject.save_data}.not_to raise_exception
+         expect {subject.load_data}.not_to raise_exception
        end
        it "if file not found tell user about this fail" do
          allow(File).to receive(:exist?).and_return(false)
-         expect(subject.save_data).to eq("file not found")
+         expect(subject.load_data).to eq("file not found")
        end
+
+    end
 
     end
 
