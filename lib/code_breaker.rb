@@ -31,7 +31,7 @@ gamer = Gamer.new
             true_false = false
           else
             response =  game.check_number answer
-            puts response
+
             if response == "++++"
               puts "You win!"
               puts "Do you want save score?(y/n)"
