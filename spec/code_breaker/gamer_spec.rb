@@ -18,21 +18,25 @@ module CodeBreaker
      end
     end
     context "#save_data" do
-      before do
-        allow(Gamer.new).to receive(:load_data).and_return(User.new(name:"ABCD",turns:2,complite:3))
+
+      it "not raise exception" do
+        expect {subject.save_data}.not_to raise_exception
       end
-      it "must save data from array @gamers to file" do
-       allow(File).to receive(:open).with("users_data.yaml","w")
+      it "if file not found tell user about this fail" do
+        allow(File).to receive(:exist?).and_return(false)
+        expect(subject.save_data).to eq("file not found")
       end
     end
     context "#load_data" do
+
+       it "not raise exception" do
+         expect {subject.save_data}.not_to raise_exception
+       end
        it "if file not found tell user about this fail" do
-
+         allow(File).to receive(:exist?).and_return(false)
+         expect(subject.save_data).to eq("file not found")
        end
 
-       it "must load some data from file to array @gamers" do
-
-       end
     end
 
   end
