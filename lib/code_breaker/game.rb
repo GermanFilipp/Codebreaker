@@ -36,7 +36,11 @@ module CodeBreaker
       end
 
       input_without_eql.each_char do |arg|
-        result << "-" if code_without_eql.include? arg
+       if code_without_eql.include? arg
+           result << "-"
+           input_without_eql.slice!(arg) 
+           code_without_eql.slice!(arg)
+        end
       end
 
       result
