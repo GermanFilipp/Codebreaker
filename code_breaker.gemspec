@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ger772@yandx.ru"]
 
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
+    spec.metadata['allowed_push_host'] = "https://github.com/GermanFilipp/Codebreaker.git"
   end
 
   spec.summary       = %q{The codebreaker game written via TDD and RSpec framework.}
