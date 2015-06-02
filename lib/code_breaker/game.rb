@@ -47,6 +47,7 @@ module CodeBreaker
     end
 
     def get_hint
+      return "you have no hints" if @available_hints == 0
       @available_hints -= 1
       position = rand(4)
       "Number from secret code - #{@secret_code[position]}. You have #{@available_hints} hints"
