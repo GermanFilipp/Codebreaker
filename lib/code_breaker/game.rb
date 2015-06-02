@@ -5,7 +5,7 @@ module CodeBreaker
     def initialize 
       @secret_code     = ""
       @available_hints = 4
-      @move            = 5
+      @move            = 10
     end 
 
     def start
