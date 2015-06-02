@@ -18,7 +18,7 @@ module CodeBreaker
     end
 
     def check_number input_number
-      @move             -= 1
+      
       result             = String.new
       code_without_eql   = String.new
       input_without_eql  = String.new
@@ -42,6 +42,7 @@ module CodeBreaker
            code_without_eql.slice!(arg)
         end
       end
+      @move             -= 1
       return "Game over" if @move < 0
       return "You win" if result == "++++"
       result
