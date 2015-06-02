@@ -42,7 +42,8 @@ module CodeBreaker
            code_without_eql.slice!(arg)
         end
       end
-
+      return "Game over" if @move == 0
+      return "You win" if result == "++++"
       result
     end
 
