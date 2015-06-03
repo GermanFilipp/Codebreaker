@@ -52,7 +52,7 @@ module CodeBreaker
       return "you have no hints" if @available_hints == 0
       @available_hints -= 1
       position = rand(4)
-      "Number from secret code - #{@secret_code[position]}.\n You have #{@available_hints} hints"
+      "Number from secret code - #{@secret_code[position]}.\nYou have #{@available_hints} hints"
     end
 
   end
