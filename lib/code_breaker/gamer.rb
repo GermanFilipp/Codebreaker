@@ -2,7 +2,7 @@ require 'yaml'
 
 module CodeBreaker
   class Gamer
-    FILE = "users_data.yaml"
+    FILE = "./code_breaker/users_data.yaml"
     attr_accessor :gamers
 
     def initialize
@@ -15,7 +15,7 @@ module CodeBreaker
 
     def create_table_score
       @gamers.each do |f|
-        puts "Name: #{f.name} Turns: #{f.turns} Rounds complite: #{f.complite}"
+        puts "Name: #{f.name} Turns: #{f.turns}"
       end
     end
 
@@ -35,7 +35,7 @@ module CodeBreaker
       new_obj = YAML::load(data)
      unless new_obj.nil?
       new_obj.each do |f|
-        @gamers.push User.new(name: f.name, turns: f.turns, complite: f.complite)
+        @gamers.push User.new(name: f.name, turns: f.turns)
       end
      end
     end

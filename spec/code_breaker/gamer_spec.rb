@@ -18,6 +18,12 @@ module CodeBreaker
      end
     end
     context "#save_data" do
+      before do
+        allow(File).to receive(:open)
+        allow(YAML).to receive(:dump)
+        allow(File).to receive(:write)
+      end
+
 
       it "not raise exception" do
         expect {subject.save_data}.not_to raise_exception
@@ -26,15 +32,16 @@ module CodeBreaker
         allow(File).to receive(:exist?).and_return(false)
         expect(subject.save_data).to eq("file not found")
       end
+
     end
     context "#load_data" do
 
        it "not raise exception" do
-         expect {subject.save_data}.not_to raise_exception
+         expect {subject.load_data}.not_to raise_exception
        end
        it "if file not found tell user about this fail" do
          allow(File).to receive(:exist?).and_return(false)
-         expect(subject.save_data).to eq("file not found")
+         expect(subject.load_data).to eq("file not found")
        end
 
     end

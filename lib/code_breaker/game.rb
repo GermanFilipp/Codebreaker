@@ -5,7 +5,7 @@ module CodeBreaker
     def initialize 
       @secret_code     = ""
       @available_hints = 4
-      @move            = 5
+      @move            = 10
     end 
 
     def start
@@ -18,7 +18,7 @@ module CodeBreaker
     end
 
     def check_number input_number
-      @move             -= 1
+      
       result             = String.new
       code_without_eql   = String.new
       input_without_eql  = String.new
@@ -36,16 +36,23 @@ module CodeBreaker
       end
 
       input_without_eql.each_char do |arg|
-        result << "-" if code_without_eql.include? arg
+       if code_without_eql.include? arg
+           result << "-"
+           input_without_eql.slice!(arg) 
+           code_without_eql.slice!(arg)
+        end
       end
-
+      @move             -= 1
+      return "Game over" if @move < 0
+      return "You win" if result == "++++"
       result
     end
 
     def get_hint
+      return "you have no hints" if @available_hints == 0
       @available_hints -= 1
       position = rand(4)
-      "Number from secret code - #{@secret_code[position]}. You have #{@available_hints} hints"
+      "Number from secret code - #{@secret_code[position]}.\nYou have #{@available_hints} hints"
     end
 
   end
