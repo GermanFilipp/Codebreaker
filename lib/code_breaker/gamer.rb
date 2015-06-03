@@ -29,7 +29,7 @@ module CodeBreaker
 
     def load_data
 
-      return "file not found" unless File.exist? SCORE_INFO
+      return "file not found" unless File.exist? FILE
 
       data    = File.read(FILE)
       new_obj = YAML::load(data)
